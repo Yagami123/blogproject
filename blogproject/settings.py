@@ -24,7 +24,7 @@ SECRET_KEY = '8s-svi4h5k&a^wi9u4zw-+tzht8uron5k1^9y=^+n$=t(eovha'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['192.168.159.130','localhost','127.0.0.1',]
+ALLOWED_HOSTS = ['192.168.159.130', 'localhost', '127.0.0.1', ]
 
 # Application definition
 
@@ -53,8 +53,7 @@ ROOT_URLCONF = 'blogproject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')]
-        ,
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -73,19 +72,19 @@ WSGI_APPLICATION = 'blogproject.wsgi.application'
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
 DATABASES = {
-    #'default': {
+    # 'default': {
     #    'ENGINE': 'django.db.backends.mysql',
     #    'NAME': 'blog',
     #    'USER': 'root',
     #    'PASSWORD': '123456',
     #    'HOST': '127.0.0.1',
     #    'PORT': '3306',
-    #}
+    # }
 
-        'default': {
+    'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    	}
+    }
 }
 
 # Password validation
@@ -124,6 +123,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = '/blog/static/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, "static/")
+# STATIC_ROOT = os.path.join(BASE_DIR, "static/")

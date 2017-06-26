@@ -6,5 +6,5 @@ from django.shortcuts import render
 def index(request):
     # return HttpResponse("欢迎光临我的博客!")
     return render(
-        request, 'blog/blog.html'
+        request, 'blog/index.html'
     )
