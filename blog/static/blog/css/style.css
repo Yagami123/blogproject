@@ -290,7 +290,7 @@ figure figcaption {
 
 #fh5co-hero {
   min-height: 500px;
-  background: #fff url(../../../blog/static/blog/images/loader.gif) no-repeat center center;
+  background: #fff url(../images/loader.gif) no-repeat center center;
   width: 100%;
   float: left;
   clear: both;
