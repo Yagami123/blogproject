@@ -14,10 +14,10 @@ refer to
 1. 创建账户：python manage.py createsuperuser
  
         已创建账号： username:Light, password:lxd123456
-2.    
+2.                                                      
      
-```
-def detail(request, pk):
+    ```
+    def detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
     post.body = markdown.markdown(post.body,
                                   extensions=[
@@ -26,4 +26,8 @@ def detail(request, pk):
                                       'markdown.extensions.toc',
                                   ])
     return render(request, 'blog/detail.html', context={'post': post})
-```
+    ```
+
+## 创建评论应用
+1. python manage.py startapp comments
+2. 在settings.py中注册这个应用

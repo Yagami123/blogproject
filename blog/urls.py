@@ -3,6 +3,7 @@ from django.views.generic import RedirectView
 
 from blog import views
 
+# html href-->blog : href="{% url 'blog:archives' date.year date.month %}"
 app_name = 'blog'
 urlpatterns = [
     url(r'^$', views.index, name='index'),
@@ -20,4 +21,6 @@ urlpatterns = [
     url(r'^post/(?P<pk>[0-9]+)/$', views.detail, name='detail'),
     # 归档
     url(r'^archives/(?P<year>[0-9]{4})/(?P<month>[0-9]{1,2})/$', views.archives, name='archives'),
+    url(r'^category/(?P<pk>[0-9]+)/$', views.category, name='category'),
 ]
+

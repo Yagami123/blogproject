@@ -43,3 +43,6 @@ class Post(models.Model):
     # 自定义get_absolute_url方法
     def get_absolute_url(self):
         return reverse('blog:detail', kwargs={'pk': self.pk})
+
+    class Meta:
+        ordering = ['-created_time', 'title']  # 首先按照created_time逆序排序，若相同，则再依据title排序
