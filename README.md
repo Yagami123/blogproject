@@ -31,3 +31,6 @@ refer to
 ## 创建评论应用
 1. python manage.py startapp comments
 2. 在settings.py中注册这个应用
+
+## gunicorn启动
+gunicorn blogproject.wsgi:application -b 67.209.185.139 --reload
