@@ -1,0 +1,8 @@
+[2017-07-03 23:48:37 -0400] [2183] [INFO] Starting gunicorn 19.7.1
+[2017-07-03 23:48:37 -0400] [2183] [INFO] Listening at: http://67.209.185.139:8000 (2183)
+[2017-07-03 23:48:37 -0400] [2183] [INFO] Using worker: sync
+[2017-07-03 23:48:37 -0400] [2186] [INFO] Booting worker with pid: 2186
+[2017-07-03 23:48:51 -0400] [2189] [INFO] Starting gunicorn 19.7.1
+[2017-07-03 23:48:51 -0400] [2189] [INFO] Listening at: http://67.209.185.139:8000 (2189)
+[2017-07-03 23:48:51 -0400] [2189] [INFO] Using worker: sync
+[2017-07-03 23:48:51 -0400] [2192] [INFO] Booting worker with pid: 2192
