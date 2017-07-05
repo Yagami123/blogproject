@@ -21,7 +21,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '8s-svi4h5k&a^wi9u4zw-+tzht8uron5k1^9y=^+n$=t(eovha'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['www.light0lin.top', 'localhost', '127.0.0.1','67.209.185.139',]
 
