@@ -34,3 +34,11 @@ refer to
 
 ## gunicorn启动
 gunicorn blogproject.wsgi:application -b 67.209.185.139 --reload
+gunicorn -c gunicorn/gunicorn-conf.py -D --error-logfile gunicorn/error.log blogproject.wsgi
+
+# 激活虚拟环境virtualenv
+1. windows: env\Scripts\activate
+2. linux: source env/bin/activate
+
+# vpn启动
+/root/ss_start.sh
