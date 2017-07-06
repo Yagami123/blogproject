@@ -1,7 +1,8 @@
+from django.http import HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404, redirect
 
 from blog.models import Post
-from comments.forms import CommentForm
+from comments.forms import CommentForm, NameForm
 
 
 def post_comment(request, post_pk):
@@ -29,3 +30,21 @@ def post_comment(request, post_pk):
             return render(request, 'blog/detail.html', context=context)
     # 不是 post 请求，说明用户没有提交数据，重定向到文章详情页。
     return redirect(post)
+
+
+def get_name(request):
+    # if this is a POST request we need to process the form data
+    if request.method == 'POST':
+        form = NameForm(request.POST)
+        # check whether it's valid:
+        if form.is_valid():
+            # process the data in form.cleaned_data as required
+            # ...
+            # redirect to a new URL:
+            return HttpResponseRedirect('/thanks/')
+
+    # if a GET (or any other method) we'll create a blank form
+    else:
+        form = NameForm()
+
+    return render(request, 'form/name.html', {'form': form})

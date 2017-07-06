@@ -32,12 +32,6 @@ def contact(request):
 def detail(request, pk):
     # 当pk对应的Post数据在数据库存在时，返回post；否则返回404错误
     post = get_object_or_404(Post, pk=pk)
-    post.body = markdown(post.body,
-                         extensions=[
-                             'markdown.extensions.extra',
-                             'markdown.extensions.codehilite',
-                             'markdown.extensions.toc',
-                         ])
     return render(request, 'blog/detail.html', context={'post': post})
 
 

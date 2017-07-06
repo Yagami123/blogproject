@@ -1,4 +1,5 @@
 {% load staticfiles %}
+{% load custom_markdown %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +23,9 @@
 </head>
 <body>
 <div class=" entry-content clearfix">
-    {{ post.body|safe }}
+    <p>
+        {{ post.body|custom_markdown }}
+    </p>
 </div>
 </body>
 </html>

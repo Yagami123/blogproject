@@ -1,4 +1,5 @@
 Django==1.11.3
+django-markdown==0.8.4
 Markdown==2.6.8
 PyMySQL==0.7.11
 pytz==2017.2

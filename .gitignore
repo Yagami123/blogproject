@@ -100,4 +100,3 @@ ENV/
 blog/__pycache__/
 blog/migrations/__pycache__/
 blogproject/__pycache__/
-/db.sqlite3
