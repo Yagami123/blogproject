@@ -1,0 +1,44 @@
+<h2>nginx and uwsgi configuration</h2>
+
+<p>refer to 
+1. https://uwsgi.readthedocs.io/en/latest/tutorials/Django<em>and</em>nginx.html
+2. https://gist.github.com/evildmp/3094281</p>
+
+<h2>django 执行流程</h2>
+
+<ol><li>python manage.py makemigrations</li><li>python manage.py migrate</li><li>python manage.py sqlmigrate blog 0001 # 迁移数据库</li><li>同步数据库 syncdb</li><li>python manage.py runserver</li></ol>
+
+<h2>django admin</h2>
+
+<ol><li><p>创建账户：python manage.py createsuperuser</p><p>    已创建账号： username:Light, password:lxd123456</p></li><li><p></p><p><code>
+def detail(request, pk):
+post = get_object_or_404(Post, pk=pk)
+post.body = markdown.markdown(post.body,
+                              extensions=[
+                                  &#39;markdown.extensions.extra&#39;,
+                                  &#39;markdown.extensions.codehilite&#39;,
+                                  &#39;markdown.extensions.toc&#39;,
+                              ])
+return render(request, &#39;blog/detail.html&#39;, context={&#39;post&#39;: post})
+</code></p></li></ol>
+
+<h2>创建评论应用</h2>
+
+<ol><li>python manage.py startapp comments</li><li>在settings.py中注册这个应用</li></ol>
+
+<h2>gunicorn启动</h2>
+
+<p>gunicorn blogproject.wsgi:application -b 67.209.185.139 --reload
+gunicorn -c gunicorn/gunicorn-conf.py -D --error-logfile gunicorn/error.log blogproject.wsgi</p>
+
+<h2>激活虚拟环境virtualenv</h2>
+
+<ol><li>windows: env\Scripts\activate</li><li>linux: source env/bin/activate</li><li>写入requirements.txt : pip freeze &gt; requirements.txt</li></ol>
+
+<h1>vpn启动</h1>
+
+<p>/root/ss_start.sh</p>
+
+<h2>使用的开源库</h2>
+
+<ol><li>django<em>markdown : https://github.com/klen/django</em>markdown</li><li>js markdown解析器： npm install markdown; npm install -g markdown (md2html、optional)</li></ol>

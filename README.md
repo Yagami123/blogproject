@@ -48,4 +48,4 @@ gunicorn -c gunicorn/gunicorn-conf.py -D --error-logfile gunicorn/error.log blog
 
 ## 使用的开源库
 1. django_markdown : https://github.com/klen/django_markdown
-2. 
+2. js markdown解析器： npm install markdown; npm install -g markdown (md2html、optional)

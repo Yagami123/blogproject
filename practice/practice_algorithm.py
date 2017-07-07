@@ -20,7 +20,24 @@ class Solution:
             else:
                 buff_dict[target - nums[i]] = i
 
+    def is_palindrome(self, x):
+        """
+        :argument Determine whether an integer is a palindrome. Do this without extra space.
+        :type x: int
+        :rtype: bool
+        """
+        if x < 0 or (x != 0 and x % 10 == 0):
+            return False
+
+        rev = 0
+        while x > rev:
+            rev = rev * 10 + x % 10
+            x = int(x / 10)
+
+        return x == rev or x == int(rev / 10)
+
 
 if __name__ == '__main__':
     solution = Solution()
-    print(solution.twoSum([1, 2, 6, 12, 4], 8))
+    print("two sum for target: ", solution.twoSum([1, 2, 6, 12, 4], 8))
+    print("whether input is palindrome: %r" % solution.is_palindrome(123454321))
