@@ -1,3 +1,4 @@
+from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.http import HttpResponse
 from django.shortcuts import render, get_object_or_404
 
@@ -14,7 +15,18 @@ def index(request):
 
 
 def blog(request):
-    return render(request, 'blog/blog.html')
+    post_list = Post.objects.all().order_by('-created_time')
+    paginator = Paginator(post_list, 12)
+    page = request.GET.get('page')
+
+    try:
+        post_list = paginator.page(page)
+    except PageNotAnInteger:
+        post_list = paginator.page(1)
+    except EmptyPage:
+        post_list = paginator.page(paginator.num_pages)
+
+    return render(request, 'blog/blog.html', context={'post_list': post_list})
 
 
 def about(request):

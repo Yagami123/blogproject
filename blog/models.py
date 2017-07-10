@@ -29,7 +29,9 @@ class Post(models.Model):
     modified_time = models.DateTimeField()
     # 文章摘要
     excerpt = models.CharField(max_length=200, blank=True)
-
+    # 文章配图
+    image = models.CharField(max_length=200, blank=True)
+    # 文章类别，标签
     category = models.ForeignKey(Category)
     tags = models.ManyToManyField(Tag, blank=True)
     # 文章作者，这里 User 是从 django.contrib.auth.models 导入的。
@@ -42,6 +44,7 @@ class Post(models.Model):
 
     # 自定义get_absolute_url方法
     def get_absolute_url(self):
+        """使用href='{{post.get_absolute_url }}'获取文章url"""
         return reverse('blog:detail', kwargs={'pk': self.pk})
 
     class Meta:
