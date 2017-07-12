@@ -7,7 +7,8 @@ from blog import views
 app_name = 'blog'
 urlpatterns = [
     url(r'^$', views.index, name='index'),
-    url(r'^blog/$', views.blog, name='blog'),
+    # url(r'^blog/$', views.blog, name='blog'),
+    url(r'^blog/$', views.IndexView.as_view(), name='blog'),
     url(r'^about/$', views.about, name='about'),
     url(r'^portfolio/$', views.portfolio, name='portfolio'),
     url(r'^contact/$', views.contact, name='contact'),
@@ -18,9 +19,10 @@ urlpatterns = [
     url(r'portfolio.html/$', RedirectView.as_view(pattern_name="portfolio")),
     url(r'contact.html/$', RedirectView.as_view(pattern_name="contact")),
     # url文章id
-    url(r'^post/(?P<pk>[0-9]+)/$', views.detail, name='detail'),
+    # url(r'^post/(?P<pk>[0-9]+)/$', views.detail, name='detail'),
+    url(r'^post/(?P<pk>[0-9]+)/$', views.PostDetailView.as_view(), name='detail'),
     # 归档
     url(r'^archives/(?P<year>[0-9]{4})/(?P<month>[0-9]{1,2})/$', views.archives, name='archives'),
-    url(r'^category/(?P<pk>[0-9]+)/$', views.category, name='category'),
+    # url(r'^category/(?P<pk>[0-9]+)/$', views.category, name='category'),
+    url(r'^category/(?P<pk>[0-9]+)/$', views.CategoryView.as_view(), name='category'),
 ]
-

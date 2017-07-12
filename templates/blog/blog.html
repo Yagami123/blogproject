@@ -86,198 +86,266 @@
         <div class="fh5co-narrow-content">
             <h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Read Our Blog</h2>
             <div class="row row-bottom-padded-md">
-                <div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">
-                    <div class="blog-entry">
-                        <a href="{% url 'blog:detail' pk=2 %}" class="blog-img"><img
-                                src="{% static "blog/images/img-1.jpg" %} "
-                                class="img-responsive"
-                                alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>
-                        <div class="desc">
-                            <h3><a href="#">Inspirational Website</a></h3>
-                            <span><small>by Admin </small> / <small> Web Design </small> / <small> <i
-                                    class="icon-comment"></i> 14</small></span>
-                            <p>Design must be functional and functionality must be translated into visual aesthetics</p>
-                            <a href="#" class="lead">Read More <i class="icon-arrow-right3"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">
-                    <div class="blog-entry">
-                        <a href="#" class="blog-img"><img src="{% static "blog/images/img-2.jpg" %} "
-                                                          class="img-responsive"
-                                                          alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>
-                        <div class="desc">
-                            <h3><a href="#">Inspirational Website</a></h3>
-                            <span><small>by Admin </small> / <small> Web Design </small> / <small> <i
-                                    class="icon-comment"></i> 14</small></span>
-                            <p>Design must be functional and functionality must be translated into visual aesthetics</p>
-                            <a href="#" class="lead">Read More <i class="icon-arrow-right3"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">
-                    <div class="blog-entry">
-                        <a href="#" class="blog-img"><img src="{% static "blog/images/img-3.jpg" %} "
-                                                          class="img-responsive"
-                                                          alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>
-                        <div class="desc">
-                            <h3><a href="#">Inspirational Website</a></h3>
-                            <span><small>by Admin </small> / <small> Web Design </small> / <small> <i
-                                    class="icon-comment"></i> 14</small></span>
-                            <p>Design must be functional and functionality must be translated into visual aesthetics</p>
-                            <a href="#" class="lead">Read More <i class="icon-arrow-right3"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">
-                    <div class="blog-entry">
-                        <a href="#" class="blog-img"><img src="{% static "blog/images/img-4.jpg" %} "
-                                                          class="img-responsive"
-                                                          alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>
-                        <div class="desc">
-                            <h3><a href="#">Inspirational Website</a></h3>
-                            <span><small>by Admin </small> / <small> Web Design </small> / <small> <i
-                                    class="icon-comment"></i> 14</small></span>
-                            <p>Design must be functional and functionality must be translated into visual aesthetics</p>
-                            <a href="#" class="lead">Read More <i class="icon-arrow-right3"></i></a>
-                        </div>
-                    </div>
-                </div>
+                {#                <div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">#}
+                {#                    <div class="blog-entry">#}
+                {#                        <a href="{% url 'blog:detail' pk=2 %}" class="blog-img"><img#}
+                {#                                src="{% static "blog/images/img-1.jpg" %} "#}
+                {#                                class="img-responsive"#}
+                {#                                alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>#}
+                {#                        <div class="desc">#}
+                {#                            <h3><a href="#">Inspirational Website</a></h3>#}
+                {#                            <span><small>by Admin </small> / <small> Web Design </small> / <small> <i#}
+                {#                                    class="icon-comment"></i> 14</small></span>#}
+                {#                            <p>Design must be functional and functionality must be translated into visual aesthetics</p>#}
+                {#                            <a href="#" class="lead">Read More <i class="icon-arrow-right3"></i></a>#}
+                {#                        </div>#}
+                {#                    </div>#}
+                {#                </div>#}
+                {#                <div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">#}
+                {#                    <div class="blog-entry">#}
+                {#                        <a href="#" class="blog-img"><img src="{% static "blog/images/img-2.jpg" %} "#}
+                {#                                                          class="img-responsive"#}
+                {#                                                          alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>#}
+                {#                        <div class="desc">#}
+                {#                            <h3><a href="#">Inspirational Website</a></h3>#}
+                {#                            <span><small>by Admin </small> / <small> Web Design </small> / <small> <i#}
+                {#                                    class="icon-comment"></i> 14</small></span>#}
+                {#                            <p>Design must be functional and functionality must be translated into visual aesthetics</p>#}
+                {#                            <a href="#" class="lead">Read More <i class="icon-arrow-right3"></i></a>#}
+                {#                        </div>#}
+                {#                    </div>#}
+                {#                </div>#}
+                {#                <div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">#}
+                {#                    <div class="blog-entry">#}
+                {#                        <a href="#" class="blog-img"><img src="{% static "blog/images/img-3.jpg" %} "#}
+                {#                                                          class="img-responsive"#}
+                {#                                                          alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>#}
+                {#                        <div class="desc">#}
+                {#                            <h3><a href="#">Inspirational Website</a></h3>#}
+                {#                            <span><small>by Admin </small> / <small> Web Design </small> / <small> <i#}
+                {#                                    class="icon-comment"></i> 14</small></span>#}
+                {#                            <p>Design must be functional and functionality must be translated into visual aesthetics</p>#}
+                {#                            <a href="#" class="lead">Read More <i class="icon-arrow-right3"></i></a>#}
+                {#                        </div>#}
+                {#                    </div>#}
+                {#                </div>#}
+                {#                <div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">#}
+                {#                    <div class="blog-entry">#}
+                {#                        <a href="#" class="blog-img"><img src="{% static "blog/images/img-4.jpg" %} "#}
+                {#                                                          class="img-responsive"#}
+                {#                                                          alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>#}
+                {#                        <div class="desc">#}
+                {#                            <h3><a href="#">Inspirational Website</a></h3>#}
+                {#                            <span><small>by Admin </small> / <small> Web Design </small> / <small> <i#}
+                {#                                    class="icon-comment"></i> 14</small></span>#}
+                {#                            <p>Design must be functional and functionality must be translated into visual aesthetics</p>#}
+                {#                            <a href="#" class="lead">Read More <i class="icon-arrow-right3"></i></a>#}
+                {#                        </div>#}
+                {#                    </div>#}
+                {#                </div>#}
+                {##}
+                {#                <div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">#}
+                {#                    <div class="blog-entry">#}
+                {#                        <a href="#" class="blog-img"><img src="{% static "blog/images/img-5.jpg" %} "#}
+                {#                                                          class="img-responsive"#}
+                {#                                                          alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>#}
+                {#                        <div class="desc">#}
+                {#                            <h3><a href="#">Inspirational Website</a></h3>#}
+                {#                            <span><small>by Admin </small> / <small> Web Design </small> / <small> <i#}
+                {#                                    class="icon-comment"></i> 14</small></span>#}
+                {#                            <p>Design must be functional and functionality must be translated into visual aesthetics</p>#}
+                {#                            <a href="#" class="lead">Read More <i class="icon-arrow-right3"></i></a>#}
+                {#                        </div>#}
+                {#                    </div>#}
+                {#                </div>#}
+                {#                <div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">#}
+                {#                    <div class="blog-entry">#}
+                {#                        <a href="#" class="blog-img"><img src="{% static "blog/images/img-6.jpg" %} "#}
+                {#                                                          class="img-responsive"#}
+                {#                                                          alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>#}
+                {#                        <div class="desc">#}
+                {#                            <h3><a href="#">Inspirational Website</a></h3>#}
+                {#                            <span><small>by Admin </small> / <small> Web Design </small> / <small> <i#}
+                {#                                    class="icon-comment"></i> 14</small></span>#}
+                {#                            <p>Design must be functional and functionality must be translated into visual aesthetics</p>#}
+                {#                            <a href="#" class="lead">Read More <i class="icon-arrow-right3"></i></a>#}
+                {#                        </div>#}
+                {#                    </div>#}
+                {#                </div>#}
+                {#                <div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">#}
+                {#                    <div class="blog-entry">#}
+                {#                        <a href="#" class="blog-img"><img src="{% static "blog/images/img-3.jpg" %} "#}
+                {#                                                          class="img-responsive"#}
+                {#                                                          alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>#}
+                {#                        <div class="desc">#}
+                {#                            <h3><a href="#">Inspirational Website</a></h3>#}
+                {#                            <span><small>by Admin </small> / <small> Web Design </small> / <small> <i#}
+                {#                                    class="icon-comment"></i> 14</small></span>#}
+                {#                            <p>Design must be functional and functionality must be translated into visual aesthetics</p>#}
+                {#                            <a href="#" class="lead">Read More <i class="icon-arrow-right3"></i></a>#}
+                {#                        </div>#}
+                {#                    </div>#}
+                {#                </div>#}
+                {#                <div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">#}
+                {#                    <div class="blog-entry">#}
+                {#                        <a href="#" class="blog-img"><img src="{% static "blog/images/img-4.jpg" %} "#}
+                {#                                                          class="img-responsive"#}
+                {#                                                          alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>#}
+                {#                        <div class="desc">#}
+                {#                            <h3><a href="#">Inspirational Website</a></h3>#}
+                {#                            <span><small>by Admin </small> / <small> Web Design </small> / <small> <i#}
+                {#                                    class="icon-comment"></i> 14</small></span>#}
+                {#                            <p>Design must be functional and functionality must be translated into visual aesthetics</p>#}
+                {#                            <a href="#" class="lead">Read More <i class="icon-arrow-right3"></i></a>#}
+                {#                        </div>#}
+                {#                    </div>#}
+                {#                </div>#}
+                {##}
+                {#                <div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">#}
+                {#                    <div class="blog-entry">#}
+                {#                        <a href="{% url 'blog:detail' pk=2 %}" class="blog-img"><img#}
+                {#                                src="{% static "blog/images/img-1.jpg" %} "#}
+                {#                                class="img-responsive"#}
+                {#                                alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>#}
+                {#                        <div class="desc">#}
+                {#                            <h3><a href="#">Inspirational Website</a></h3>#}
+                {#                            <span><small>by Admin </small> / <small> Web Design </small> / <small> <i#}
+                {#                                    class="icon-comment"></i> 14</small></span>#}
+                {#                            <p>Design must be functional and functionality must be translated into visual aesthetics</p>#}
+                {#                            <a href="#" class="lead">Read More <i class="icon-arrow-right3"></i></a>#}
+                {#                        </div>#}
+                {#                    </div>#}
+                {#                </div>#}
+                {#                <div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">#}
+                {#                    <div class="blog-entry">#}
+                {#                        <a href="#" class="blog-img">#}
+                {#                            <img src="{% static "blog/images/img-2.jpg" %} "#}
+                {#                                 class="img-responsive"#}
+                {#                                 alt="Free HTML5 Bootstrap Template by FreeHTML5.co">#}
+                {#                        </a>#}
+                {#                        <div class="desc">#}
+                {#                            <h3><a href="#">Inspirational Website</a></h3>#}
+                {#                            <span><small>by Admin </small> / <small> Web Design </small> / <small> <i#}
+                {#                                    class="icon-comment"></i> 14</small></span>#}
+                {#                            <p>Design must be functional and functionality must be translated into visual aesthetics</p>#}
+                {#                            <a href="#" class="lead">Read More <i class="icon-arrow-right3"></i></a>#}
+                {#                        </div>#}
+                {#                    </div>#}
+                {#                </div>#}
+                {#                <div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">#}
+                {#                    <div class="blog-entry">#}
+                {#                        <a href="#" class="blog-img"><img src="{% static "blog/images/img-3.jpg" %} "#}
+                {#                                                          class="img-responsive"#}
+                {#                                                          alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>#}
+                {#                        <div class="desc">#}
+                {#                            <h3><a href="#">Inspirational Website</a></h3>#}
+                {#                            <span><small>by Admin </small> / <small> Web Design </small> / <small> <i#}
+                {#                                    class="icon-comment"></i> 14</small></span>#}
+                {#                            <p>Design must be functional and functionality must be translated into visual aesthetics</p>#}
+                {#                            <a href="#" class="lead">Read More <i class="icon-arrow-right3"></i></a>#}
+                {#                        </div>#}
+                {#                    </div>#}
+                {#                </div>#}
 
-                <div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">
-                    <div class="blog-entry">
-                        <a href="#" class="blog-img"><img src="{% static "blog/images/img-5.jpg" %} "
-                                                          class="img-responsive"
-                                                          alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>
-                        <div class="desc">
-                            <h3><a href="#">Inspirational Website</a></h3>
-                            <span><small>by Admin </small> / <small> Web Design </small> / <small> <i
-                                    class="icon-comment"></i> 14</small></span>
-                            <p>Design must be functional and functionality must be translated into visual aesthetics</p>
-                            <a href="#" class="lead">Read More <i class="icon-arrow-right3"></i></a>
+                {#                当前分页文章#}
+                {% for post in post_list %}
+                    <div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">
+                        <div class="blog-entry">
+                            <a href="{{ post.get_absolute_url }}" class="blog-img">
+                                {# HTML ASCII及URL编码参见： http://www.w3school.com.cn/tags/html_ref_ascii.asp#}
+                                <img id="image" src="{% static "blog/images/img-1.jpg" %}"
+                                     class="img-responsive"
+                                     alt="Free HTML5 Bootstrap Template by FreeHTML5.co">
+                            </a>
+                            {{ post.image }}
+                            <div class="desc">
+                                <h3><a href="{{ post.get_absolute_url }}">Inspirational Website</a></h3>
+                                <span><small>by Admin </small> / <small> Web Design </small> / <small> <i
+                                        class="icon-comment"></i> 14</small></span>
+                                <p>Design must be functional and functionality must be translated into visual
+                                    aesthetics</p>
+                                <a href="{{ post.get_absolute_url }}" class="lead">Read More <i
+                                        class="icon-arrow-right3"></i></a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">
-                    <div class="blog-entry">
-                        <a href="#" class="blog-img"><img src="{% static "blog/images/img-6.jpg" %} "
-                                                          class="img-responsive"
-                                                          alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>
-                        <div class="desc">
-                            <h3><a href="#">Inspirational Website</a></h3>
-                            <span><small>by Admin </small> / <small> Web Design </small> / <small> <i
-                                    class="icon-comment"></i> 14</small></span>
-                            <p>Design must be functional and functionality must be translated into visual aesthetics</p>
-                            <a href="#" class="lead">Read More <i class="icon-arrow-right3"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">
-                    <div class="blog-entry">
-                        <a href="#" class="blog-img"><img src="{% static "blog/images/img-3.jpg" %} "
-                                                          class="img-responsive"
-                                                          alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>
-                        <div class="desc">
-                            <h3><a href="#">Inspirational Website</a></h3>
-                            <span><small>by Admin </small> / <small> Web Design </small> / <small> <i
-                                    class="icon-comment"></i> 14</small></span>
-                            <p>Design must be functional and functionality must be translated into visual aesthetics</p>
-                            <a href="#" class="lead">Read More <i class="icon-arrow-right3"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">
-                    <div class="blog-entry">
-                        <a href="#" class="blog-img"><img src="{% static "blog/images/img-4.jpg" %} "
-                                                          class="img-responsive"
-                                                          alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>
-                        <div class="desc">
-                            <h3><a href="#">Inspirational Website</a></h3>
-                            <span><small>by Admin </small> / <small> Web Design </small> / <small> <i
-                                    class="icon-comment"></i> 14</small></span>
-                            <p>Design must be functional and functionality must be translated into visual aesthetics</p>
-                            <a href="#" class="lead">Read More <i class="icon-arrow-right3"></i></a>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">
-                    <div class="blog-entry">
-                        <a href="{% url 'blog:detail' pk=2 %}" class="blog-img"><img
-                                src="{% static "blog/images/img-1.jpg" %} "
-                                class="img-responsive"
-                                alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>
-                        <div class="desc">
-                            <h3><a href="#">Inspirational Website</a></h3>
-                            <span><small>by Admin </small> / <small> Web Design </small> / <small> <i
-                                    class="icon-comment"></i> 14</small></span>
-                            <p>Design must be functional and functionality must be translated into visual aesthetics</p>
-                            <a href="#" class="lead">Read More <i class="icon-arrow-right3"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">
-                    <div class="blog-entry">
-                        <a href="#" class="blog-img">
-                            <img src="{% static "blog/images/img-2.jpg" %} "
-                                 class="img-responsive"
-                                 alt="Free HTML5 Bootstrap Template by FreeHTML5.co">
-                        </a>
-                        <div class="desc">
-                            <h3><a href="#">Inspirational Website</a></h3>
-                            <span><small>by Admin </small> / <small> Web Design </small> / <small> <i
-                                    class="icon-comment"></i> 14</small></span>
-                            <p>Design must be functional and functionality must be translated into visual aesthetics</p>
-                            <a href="#" class="lead">Read More <i class="icon-arrow-right3"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">
-                    <div class="blog-entry">
-                        <a href="#" class="blog-img"><img src="{% static "blog/images/img-3.jpg" %} "
-                                                          class="img-responsive"
-                                                          alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>
-                        <div class="desc">
-                            <h3><a href="#">Inspirational Website</a></h3>
-                            <span><small>by Admin </small> / <small> Web Design </small> / <small> <i
-                                    class="icon-comment"></i> 14</small></span>
-                            <p>Design must be functional and functionality must be translated into visual aesthetics</p>
-                            <a href="#" class="lead">Read More <i class="icon-arrow-right3"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">
-                    <div class="blog-entry">
-                        <a href="#" class="blog-img"><img src="{% static "blog/images/img-4.jpg" %} "
-                                                          class="img-responsive"
-                                                          alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>
-                        <div class="desc">
-                            <h3><a href="#">Inspirational Website</a></h3>
-                            <span><small>by Admin </small> / <small> Web Design </small> / <small> <i
-                                    class="icon-comment"></i> 14</small></span>
-                            <p>Design must be functional and functionality must be translated into visual aesthetics</p>
-                            <a href="#" class="lead">Read More <i class="icon-arrow-right3"></i></a>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
 
         {#        分页导航#}
-        <div class="pagination">
-            {% if post_list.has_previous %}
-                {#                如果还有上一页，显示上一页按钮#}
-                <a href="?page={{ post_list.previous_page_number }}">上一页</a>
-            {% endif %}
-            <span class="current">
-                {#                显示当前页面信息#}
-                第 {{ post_list.number }} 页 / 共 {{ post_list.paginator.num_pages }} 页
-            </span>
-            {% if post_list.has_next %}
-                {#                如果还有下一页，则显示下一页按钮#}
-                <a href="?page={{ post_list.next_page_number }}">下一页</a>
-            {% endif %}
-        </div>
+        {#        {% if is_paginated %}#}
+        {#            <div class="pagination-simple">#}
+        {#                {% if page_obj.has_previous %}#}
+        {#                如果还有上一页，显示上一页按钮#}
+        {#                    <a href="?page={{ page_obj.previous_page_number }}">上一页</a>#}
+        {#                {% endif %}#}
+        {#                <span class="current">#}
+        {#                显示当前页面信息#}
+        {#                第 {{ page_obj.number }} 页 / 共 {{ paginator.num_pages }} 页#}
+        {#                    {{ post_list }}#}
+        {#            </span>#}
+        {#                {% if page_obj.has_next %}#}
+        {#                如果还有下一页，则显示下一页按钮#}
+        {#                    <a href="?page={{ page_obj.next_page_number }}">下一页</a>#}
+        {#                {% endif %}#}
+        {#            </div>#}
+        {#        {% endif %}#}
+
+        {#        分页导航--另一种实现#}
+        {% if is_paginated %}
+            <nav class="animate-box" style="text-align: center" data-animate-effect="fadeInLeft">
+                <ul class="pagination">
+                    {% if page_obj.number > 1 %}
+                        <li>
+                            <a href="?page={{ page_obj.previous_page_number }}" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                        </li>
+                    {% endif %}
+
+                    {% if first %}
+                        <li><a href="?page=1">1</a></li>
+                    {% endif %}
+
+                    {% if left %}
+                        {% if left_has_more %}
+                            <li><span>...</span></li>
+                        {% endif %}
+                        {% for i in left %}
+                            <li><a href="?page={{ i }}">{{ i }}</a></li>
+                        {% endfor %}
+                    {% endif %}
+
+                    <li class="active"><a href="?page={{ page_obj.number }}">{{ page_obj.number }}<span
+                            class="sr-only">(current)</span></a></li>
+
+                    {% if right %}
+                        {% for i in right %}
+                            <li><a href="?page={{ i }}">{{ i }}</a></li>
+                        {% endfor %}
+                        {% if right_has_more %}
+                            <li><span>...</span></li>
+                        {% endif %}
+                    {% endif %}
+
+                    {% if last %}
+                        <li><a href="?page={{ paginator.num_pages }}">{{ paginator.num_pages }}</a></li>
+                    {% endif %}
+
+                    {% if page_obj.number < paginator.num_pages %}
+                        <li>
+                            <a href="?page={{ page_obj.next_page_number }}" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </li>
+                    {% endif %}
+                </ul>
+            </nav>
+        {% endif %}
 
         <div id="get-in-touch">
             <div class="fh5co-narrow-content">
@@ -296,6 +364,7 @@
                 </div>
             </div>
         </div>
+
     </div>
 </div>
 
