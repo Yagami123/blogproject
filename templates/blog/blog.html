@@ -1,4 +1,16 @@
 {% load staticfiles %}
+<style type="text/css">
+    @font-face {
+        font-family: 'icomoon';
+        src: url("{% static 'blog/fonts/icomoon/icomoon.eot?6py85u' %}");
+        src: url("{% static 'blog/fonts/icomoon/icomoon.eot?6py85u#iefix' %}") format('embedded-opentype'),
+        url("{% static 'blog/fonts/icomoon/icomoon.ttf?6py85u' %}") format('truetype'),
+        url("{% static 'blog//fonts/icomoon/icomoon.woff?6py85u' %}") format('woff'),
+        url("{% static 'blog/fonts/icomoon/icomoon.svg?6py85u#icomoon' %}") format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+</style>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -37,11 +49,14 @@
     <link rel="stylesheet" href="{% static "blog/css/icomoon.css" %} ">
     <!-- Bootstrap  -->
     <link rel="stylesheet" href="{% static "blog/css/bootstrap.css" %} ">
+    {#    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">#}
+    {#    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>#}
+    {#    <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>#}
     <!-- Flexslider  -->
     <link rel="stylesheet" href="{% static "blog/css/flexslider.css" %} ">
     <!-- Theme style  -->
     <link rel="stylesheet" href="{% static "blog/css/style.css" %}">
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <!-- Modernizr JS -->
     <script src="{% static "blog/js/modernizr-2.6.2.min.js" %} "></script>
     <!-- FOR IE9 below -->
@@ -266,8 +281,12 @@
                                         class="icon-comment"></i> 14</small></span>
                                 <p>Design must be functional and functionality must be translated into visual
                                     aesthetics</p>
-                                <a href="{{ post.get_absolute_url }}" class="lead">Read More <i
-                                        class="icon-arrow-right3"></i></a>
+                                <span class="glyphicons glyphicons-arrow-right"></span>
+                                <a href="{{ post.get_absolute_url }}" class="lead">Read More
+                                    {#                                    <i class="glyphicons glyphicons-circle-arrow-right"></i>#}
+                                    <i class="icon-arrow-right"></i>
+                                    {#                                                                        <i class="icon-arrow">&rarr;</i>#}
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -377,6 +396,7 @@
 <!-- Bootstrap -->
 <script src="{% static "blog/js/bootstrap.min.js" %} "></script>
 <!-- Waypoints -->
+
 <script src="{% static "blog/js/jquery.waypoints.min.js" %} "></script>
 <!-- Flexslider -->
 <script src="{% static "blog/js/jquery.flexslider-min.js" %} "></script>

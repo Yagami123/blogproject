@@ -67,11 +67,11 @@ $form-group-margin-bottom:       30px !default;
 
 @font-face {
 	font-family: 'icomoon';
-	src:url('../../../blog/static/blog/fonts/icomoon/icomoon.eot?srf3rx');
-	src:url('../../../blog/static/blog/fonts/icomoon/icomoon.eot?srf3rx#iefix') format('embedded-opentype'),
-		url('../../../blog/static/blog/fonts/icomoon/icomoon.ttf?srf3rx') format('truetype'),
-		url('../../../blog/static/blog/fonts/icomoon/icomoon.woff?srf3rx') format('woff'),
-		url('../../../blog/static/blog/fonts/icomoon/icomoon.svg?srf3rx#icomoon') format('svg');
+	src:url('../fonts/icomoon/icomoon.eot?srf3rx');
+	src:url('../fonts/icomoon/icomoon.eot?srf3rx#iefix') format('embedded-opentype'),
+		url('../fonts/icomoon/icomoon.ttf?srf3rx') format('truetype'),
+		url('../fonts/icomoon/icomoon.woff?srf3rx') format('woff'),
+		url('../fonts/icomoon/icomoon.svg?srf3rx#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -359,7 +359,7 @@ figure {
 
 #fh5co-hero {
 	min-height: 500px;
-	background: $brand-white url(../../../blog/static/blog/images/loader.gif) no-repeat center center;
+	background: $brand-white url(../images/loader.gif) no-repeat center center;
 	width: 100%;
 	float: left;
 	clear: both;
