@@ -84,7 +84,7 @@
 
     <div id="fh5co-main">
         <div class="fh5co-narrow-content">
-            <h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Read Our Blog</h2>
+            <h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Read My Blog</h2>
             <div class="row row-bottom-padded-md">
                 {#                <div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">#}
                 {#                    <div class="blog-entry">#}
@@ -253,14 +253,16 @@
                         <div class="blog-entry">
                             <a href="{{ post.get_absolute_url }}" class="blog-img">
                                 {# HTML ASCII及URL编码参见： http://www.w3school.com.cn/tags/html_ref_ascii.asp#}
-                                <img id="image" src="{% static "blog/images/img-1.jpg" %}"
+                                {#                                <img id="image" src="{% static "blog/images/img-1.jpg" %}"#}
+                                <img src="/static/{{ post.image }}"
+                                     onerror="this.onerror=null;this.src='{% static "blog/images/django_1.jpg" %}'"
                                      class="img-responsive"
-                                     alt="Free HTML5 Bootstrap Template by FreeHTML5.co">
+                                     alt="Free HTML5 Bootstrap Template by FreeHTML5.co"
+                                >
                             </a>
-                            {{ post.image }}
                             <div class="desc">
-                                <h3><a href="{{ post.get_absolute_url }}">Inspirational Website</a></h3>
-                                <span><small>by Admin </small> / <small> Web Design </small> / <small> <i
+                                <h3><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h3>
+                                <span><small>by {{ post.author }} </small> / <small> Web Design </small> / <small> <i
                                         class="icon-comment"></i> 14</small></span>
                                 <p>Design must be functional and functionality must be translated into visual
                                     aesthetics</p>
